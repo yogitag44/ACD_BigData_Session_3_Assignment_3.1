@@ -33,6 +33,14 @@ It contains two main components:
 i) Scheduler: is responsible for allocating resources to the various running applications.
 ii) Application Manager: is responsible for accepting job-submissions, negotiating the first container for ApplicationMaster and provides the service for restarting the ApplicationMaster container on failure.
 
+While an application is running, the ApplicationMaster manages the following:
+          a) Application lifecycle
+          b) Dynamic adjustments to resource consumption
+          c) Execution flow
+          d) Faults
+          f) Providing status and metrics
+
+
 d) NodeManager (YARN Components): The nodeManger is the pre-machine framework agent who creates container for  each task.
 The containers can have variable resource sizes and the task can be any type of computations not just map/reduce tasks.
 It then monitors the resource usage (cpu, memory, disk, network) of the container and report them to the ResourceManager.
